@@ -35,7 +35,9 @@ export default function ProductDetailPage({ params }) {
   }, [id]);
 
   const handleItem = async (id) => {
-    const response = await fetch(`http://localhost:3000/api/product?id=${id}`);
+    const response = await fetch(
+      `https://book-store-new-omega.vercel.app/api/product?id=${id}`
+    );
     const results = await response.json();
     console.log(results);
     return results;
